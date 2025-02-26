@@ -1,7 +1,18 @@
 "use client";
+import { useEffect, useState } from 'react';
 import { Typography, Paper, TextField, Button, Box } from '@mui/material';
 
 export default function Contact() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <Paper elevation={3} sx={{ p: 3 }}>
       <Typography variant="h4" component="h1" gutterBottom>

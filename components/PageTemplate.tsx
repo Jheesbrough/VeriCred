@@ -8,8 +8,8 @@ interface PageTemplateProps {
 
 export default function PageTemplate({ children }: PageTemplateProps) {
   return (
-    <>
-      <Container maxWidth="md">
+    <Box display="flex" flexDirection="column" minHeight="100vh">
+      <Container maxWidth="md" sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
         <AppBar position="static">
           <Toolbar>
             <Link href="/" passHref>
@@ -19,11 +19,11 @@ export default function PageTemplate({ children }: PageTemplateProps) {
             </Link>
           </Toolbar>
         </AppBar>
-        <Box sx={{ my: 4 }}>
+        <Box sx={{ flexGrow: 1, my: 4 }}>
           {children}
         </Box>
         <Footer />
       </Container>
-    </>
+    </Box>
   );
 }

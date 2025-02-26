@@ -1,18 +1,17 @@
 "use client";
+import { Suspense, useEffect, useState } from 'react';
 import { Container, Typography, Box, CircularProgress } from '@mui/material';
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
 import ReactSpeedometer from 'react-d3-speedometer';
-import { ScoreData } from '../../types/score';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip } from 'recharts';
 
-export default function Score() {
+function ScoreContent() {
   const searchParams = useSearchParams();
   const platform = searchParams?.get('platform') || '';
   const handle = searchParams?.get('handle') || '';
   const [loading, setLoading] = useState(true);
-  const [score, setScore] = useState<ScoreData['score']>(0);
-  const [categories, setCategories] = useState<ScoreData['categories']>({
+  const [score, setScore] = useState(0);
+  const [categories, setCategories] = useState({
     network: 0,
     experience: 0,
     personal: 0,
@@ -23,7 +22,6 @@ export default function Score() {
 
   useEffect(() => {
     if (!platform || !handle) {
-      // Redirect to /get-started if platform or handle is null
       window.location.href = '/get-started';
       return;
     }
@@ -34,14 +32,32 @@ export default function Score() {
       return;
     }
 
-    // Fetch the score and categories from a local API
-    fetch('/api/get-score')
-      .then((response) => response.json())
-      .then((data: ScoreData) => {
-        setScore(data.score);
-        setCategories(data.categories);
-        setLoading(false);
-      });
+    const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+    const fetchData = async () => {
+      await delay(2000);
+
+      const generatedCategories = {
+        network: Math.floor(Math.random() * 100) + 1,
+        experience: Math.floor(Math.random() * 100) + 1,
+        personal: Math.floor(Math.random() * 100) + 1,
+        socialMedia: Math.floor(Math.random() * 100) + 1,
+        reputation: Math.floor(Math.random() * 100) + 1,
+      };
+
+      const generatedScore = Math.floor(
+        (generatedCategories.network +
+          generatedCategories.experience +
+          generatedCategories.personal +
+          generatedCategories.socialMedia +
+          generatedCategories.reputation) / 5
+      );
+
+      setScore(generatedScore);
+      setCategories(generatedCategories);
+      setLoading(false);
+    };
+
+    fetchData();
   }, [platform, handle]);
 
   const data = [
@@ -75,8 +91,8 @@ export default function Score() {
                 maxValue={100}
                 segments={5}
                 needleColor="steelblue"
-                startColor="green"
-                endColor="red"
+                startColor="red"
+                endColor="green"
                 textColor="black"
                 height={200}
               />
@@ -99,5 +115,13 @@ export default function Score() {
         )}
       </Box>
     </Container>
+  );
+}
+
+export default function Score() {
+  return (
+    <Suspense fallback={<CircularProgress />}>
+      <ScoreContent />
+    </Suspense>
   );
 }

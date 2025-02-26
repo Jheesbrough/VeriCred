@@ -25,5 +25,5 @@ All you need to do is provide the candidate's social media profile, and our AI w
 3. Use the insights provided by VeriCred to make informed hiring decisions.
 4. Solicit feedback from hiring teams to continuously improve the evaluation process.
 
-> [!SATIRE]
-> **Note:** This is a fictional project created as part of my project to 'build the torture nexus'. The concept of a hiring system based on social scoring determined by AI is meant as a warning against the usage of AI in hiring processes, not a recommendation.
+> [!IMPORTANT]
+> This is a fictional project created as part of my project to 'build the [torture nexus](https://x.com/AlexBlechman/status/1457842724128833538?lang=en)'. The concept of a hiring system based on social scoring determined by AI is meant as a warning against the usage of AI in hiring processes, not a recommendation.

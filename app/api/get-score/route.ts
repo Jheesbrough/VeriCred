@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 
-export function GET() {
+export async function GET() {
+  const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+  await delay(2000); // 2-second delay
+
   const categories = {
     network: Math.floor(Math.random() * 100) + 1,
     experience: Math.floor(Math.random() * 100) + 1,

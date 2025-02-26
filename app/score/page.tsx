@@ -19,6 +19,7 @@ export default function Score() {
     socialMedia: 0,
     reputation: 0,
   });
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!platform || !handle) {
@@ -27,17 +28,20 @@ export default function Score() {
       return;
     }
 
-    // Simulate loading
-    setTimeout(() => {
-      // Fetch the score and categories from a local API
-      fetch('/api/get-score')
-        .then((response) => response.json())
-        .then((data: ScoreData) => {
-          setScore(data.score);
-          setCategories(data.categories);
-          setLoading(false);
-        });
-    }, 2000);
+    if (platform !== 'linkedin') {
+      setError('Currently, only LinkedIn profiles are supported.');
+      setLoading(false);
+      return;
+    }
+
+    // Fetch the score and categories from a local API
+    fetch('/api/get-score')
+      .then((response) => response.json())
+      .then((data: ScoreData) => {
+        setScore(data.score);
+        setCategories(data.categories);
+        setLoading(false);
+      });
   }, [platform, handle]);
 
   const data = [
@@ -58,6 +62,10 @@ export default function Score() {
           <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
             <CircularProgress />
           </Box>
+        ) : error ? (
+          <Typography variant="h6" color="error">
+            {error}
+          </Typography>
         ) : (
           <>
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -74,8 +82,8 @@ export default function Score() {
               />
             </Box>
             <Typography variant="h5" component="h2" gutterBottom m={0}>
-              <a href={`https://${platform}.com/${handle}`} target="_blank" rel="noopener noreferrer">
-                {`https://${platform}.com/${handle}`}
+              <a href={`https://${platform}.com/in/${handle}`} target="_blank" rel="noopener noreferrer">
+                {`https://${platform}.com/in/${handle}`}
               </a>
             </Typography>
             <Box sx={{ display: 'flex', justifyContent: 'center' }}>

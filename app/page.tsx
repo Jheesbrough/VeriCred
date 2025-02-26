@@ -1,10 +1,9 @@
-import { Container, Typography, Button, Box, AppBar, Toolbar, Paper } from '@mui/material';
+import { Typography, Button, Box, Paper } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import InfoIcon from '@mui/icons-material/Info';
 import SecurityIcon from '@mui/icons-material/Security';
 import SpeedIcon from '@mui/icons-material/Speed';
 import Image from 'next/image';
-import Footer from '../components/Footer';
 import Link from 'next/link';
 
 export default function Home() {
@@ -46,7 +45,7 @@ export default function Home() {
                 Secure
               </Typography>
               <Typography variant="body2">
-                Your candidates' data is safe with us, protected by top-notch security measures.
+                Your candidates&apos; data is safe with us, protected by top-notch security measures.
               </Typography>
             </Paper>
           </Grid>

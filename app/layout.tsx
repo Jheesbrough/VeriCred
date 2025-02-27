@@ -9,8 +9,8 @@ import { Metadata } from 'next';
 import PageTemplate from '@/components/PageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Vericred',
-  description: 'Get your score and see how itll affect your rates'
+  title: 'VeriCred',
+  description: 'Automated employee scoring',
 }
 
 const roboto = Roboto({

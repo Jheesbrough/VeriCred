@@ -1,7 +1,6 @@
 import { Box, TextField, Button } from '@mui/material';
 import { SetStateAction, useState } from 'react';
 import { useRouter } from 'next/navigation';
-
 interface SocialMediaInputProps {
   platform: string;
 }

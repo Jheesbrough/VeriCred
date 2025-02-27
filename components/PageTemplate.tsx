@@ -1,4 +1,4 @@
-import { Container, Typography, Box, AppBar, Toolbar } from '@mui/material';
+import { Container, Typography, Box, AppBar, Toolbar, Button } from '@mui/material';
 import Footer from './Footer';
 import Link from 'next/link';
 
@@ -14,8 +14,12 @@ export default function PageTemplate({ children }: PageTemplateProps) {
           <Toolbar>
             <Link href="/" passHref>
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                VeriCred - automated employee scoring
+                VeriCred - Automated Employability Scoring
               </Typography>
+            </Link>
+            <Box sx={{ flexGrow: 1 }} />
+            <Link href="/login" passHref>
+              <Button color="inherit">Login</Button>
             </Link>
           </Toolbar>
         </AppBar>

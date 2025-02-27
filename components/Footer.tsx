@@ -7,13 +7,13 @@ export default function Footer() {
         © {new Date().getFullYear()} VeriCred
       </Typography>
       <Box sx={{ mt: 2 }}>
-        <Link href="https://github.com/Jheesbrough/vericred" color="inherit" sx={{ mx: 1 }}>
+        <Link href="https://github.com/Jheesbrough/VeriCred" color="inherit" sx={{ mx: 1 }}>
           Privacy Notice
         </Link>
-        <Link href="https://github.com/Jheesbrough/vericred" color="inherit" sx={{ mx: 1 }}>
+        <Link href="https://github.com/Jheesbrough/VeriCred" color="inherit" sx={{ mx: 1 }}>
           Cookie Policy
         </Link>
-        <Link href="https://github.com/Jheesbrough/vericred" color="inherit" sx={{ mx: 1 }}>
+        <Link href="https://github.com/Jheesbrough/VeriCred" color="inherit" sx={{ mx: 1 }}>
           Terms of Service
         </Link>
         <Link href="/about" color="inherit" sx={{ mx: 1 }}>

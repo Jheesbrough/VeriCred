@@ -186,7 +186,7 @@ export default function Home() {
             Why Companies Love VeriCred
           </Typography>
           <Typography variant="body1" gutterBottom>
-            Our platform provides accurate, secure, and fast employability scores, helping you make great hiring decisions. By leveraging advanced AI algorithms, we ensure that each score is based on comprehensive data analysis, giving you a reliable measure of a candidate's potential and fit for your organization and your work culture. On average, companies that use VeriCred see a 140% increase in hiring efficiency and an 80% decrease in turnover rates. Join the VeriCred community today and experience the difference for yourself.
+            Our platform provides accurate, secure, and fast employability scores, helping you make great hiring decisions. By leveraging advanced AI algorithms, we ensure that each score is based on comprehensive data analysis, giving you a reliable measure of a candidate&apos;s potential and fit for your organization and your work culture. On average, companies that use VeriCred see a 140% increase in hiring efficiency and an 80% decrease in turnover rates. Join the VeriCred community today and experience the difference for yourself.
           </Typography>
         </Box>
 

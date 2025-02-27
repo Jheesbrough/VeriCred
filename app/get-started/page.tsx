@@ -1,8 +1,7 @@
 "use client";
-import { Container, Typography, Button, Box, Paper, Link, Stack } from '@mui/material';
-import Grid from '@mui/material/Grid2';
 import SocialMediaInput from '@/components/SocialMediaInput';
-import Image from 'next/image';
+import { Box, Button, Container, Link, Paper, Stack, Typography } from '@mui/material';
+import Grid from '@mui/material/Grid2';
 
 export default function GetStarted() {
   return (

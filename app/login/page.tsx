@@ -68,7 +68,7 @@ export default function LoginPage() {
         </Button>
         <Link href="/contact" passHref>
           <Button color="secondary" sx={{ mt: 2 }}>
-            Don't have an account? Contact our sales team to get started.
+            Don&apos;t have an account? Contact our sales team to get started.
           </Button>
         </Link>
       </Box>

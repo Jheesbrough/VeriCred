@@ -29,7 +29,7 @@ export default function FAQ() {
         <Typography variant="body1" sx={{ mb: 2 }}>
           <strong>Q: Can I opt out of being scored?</strong>
           <br />
-          A: VeriCred only scans public social media profiles. If you want to opt out, you are welcome to delete or privatize your social media accounts.
+          A: VeriCred only scans public social media profiles and available community data. If you want to opt out, you are welcome to delete your social media profiles or make them private.
         </Typography>
         <Typography variant="body1" sx={{ mb: 2 }}>
           <strong>Q: How accurate are the scores?</strong>

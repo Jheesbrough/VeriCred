@@ -1,16 +1,16 @@
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
-import { Roboto } from 'next/font/google';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme';
-import './globals.css';
-import { CssBaseline } from '@mui/material';
-import Head from 'next/head'
-import { Metadata } from 'next';
 import PageTemplate from '@/components/PageTemplate';
+import { CssBaseline } from '@mui/material';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import { ThemeProvider } from '@mui/material/styles';
+import { Metadata } from 'next';
+import { Roboto } from 'next/font/google';
+import Head from 'next/head';
+import './globals.css';
+import theme from './theme';
 
 export const metadata: Metadata = {
   title: 'VeriCred',
-  description: 'Automated employee scoring',
+  description: 'VeriCred offers Automated Employability Scoring for businesses of all sizes. As a trusted partner, we help you make better hiring decisions without bias or discrimination using our proprietary AI algorithms.',
 }
 
 const roboto = Roboto({

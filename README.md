@@ -46,4 +46,4 @@ npm run dev
 You can then access VeriCred at [http://localhost:3000](http://localhost:3000).
 
 > [!IMPORTANT]
-> This is a fictional project created as part of my project to 'build the [Torment Nexus](https://x.com/AlexBlechman/status/1457842724128833538?lang=en)'. The concept of a hiring system based on social scoring determined by AI is meant as a warning against the usage of AI in hiring processes, not a recommendation.
+> This is a fictional project created as part of my project to 'create the [Torment Nexus](https://x.com/AlexBlechman/status/1457842724128833538?lang=en)'. The concept of a hiring system based on social scoring determined by AI is meant as a warning against the usage of AI in hiring processes, not a recommendation.

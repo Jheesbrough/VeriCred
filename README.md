@@ -4,7 +4,11 @@
 <!-- Image -->
 ![VeriCred](/public/office.jpg)
 
-Welcome to VeriCred, a platform designed to empower your hiring process with AI-assisted employability scores. Our goal is to provide accurate, secure, and fast employability scores to help you make informed hiring decisions.
+Vericred is a fictional company that specilises in a hiring process with AI-assisted employability scores. Our goal is to provide accurate, secure, and fast employability scores to help you make informed hiring decisions.
+
+> [!IMPORTANT]
+> This is a fictional project created as part of my project to 'build the [Torment Nexus](https://x.com/AlexBlechman/status/1457842724128833538?lang=en)'. The concept of a hiring system based on social scoring determined by AI is meant as a warning against the usage of AI in hiring processes, not a recommendation.
+
 
 ## Features
 
@@ -44,6 +48,3 @@ npm run dev
 ```
 
 You can then access VeriCred at [http://localhost:3000](http://localhost:3000).
-
-> [!IMPORTANT]
-> This is a fictional project created as part of my project to 'build the [Torment Nexus](https://x.com/AlexBlechman/status/1457842724128833538?lang=en)'. The concept of a hiring system based on social scoring determined by AI is meant as a warning against the usage of AI in hiring processes, not a recommendation.
